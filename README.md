@@ -12,6 +12,8 @@ We  have built a social media application we call ***Stay in touch***
 2. Exporting the ERD to jpeg 
 3. Creating the folder we named it docs and updloaded the ERD file
 
+![screenshot](https://github.com/IBUNHABIBU/ror-social-scaffold/blob/Milestone-1/docs/ERD.jpeg)
+
 ## Authors
 #### Author 1
 * Github: Salum Habibu https://github.com/IBUNHABIBU 
