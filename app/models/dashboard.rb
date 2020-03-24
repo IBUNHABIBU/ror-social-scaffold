@@ -1,2 +1,0 @@
-class Dashboard < ApplicationRecord
-end
