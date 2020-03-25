@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :dashboards
+  resources :dashboards, only: [:new, :create, :delete]
   root 'posts#index'
 
   devise_for :users

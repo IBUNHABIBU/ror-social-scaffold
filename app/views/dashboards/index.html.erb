@@ -1,0 +1,8 @@
+<%= content_tag :tr , id: dom_id(user) do %>
+  <td><%= user.email %></td>
+  <td>
+    <%= link_to 'Add Friend', [:new, :friendships, id: user ], remote: true %>
+    <!--<%= link_to 'Add Friend', [:new, :friendships, id: user ], remote: true %>-->
+    <!--<%= link_to 'Add Friend', [:new, :friendships, id: user ], remote: true %>-->
+  </td>
+<% end %>
