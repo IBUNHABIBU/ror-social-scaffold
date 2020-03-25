@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :dashboards, only: [:new, :create, :delete]
+  get 'friendships/create'
+  get 'friendships/index'
+  resources :dashboards, only: [:new, :create, :destroy]
   root 'posts#index'
 
   devise_for :users

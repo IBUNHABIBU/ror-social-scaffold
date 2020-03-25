@@ -1,8 +1,12 @@
-<%= content_tag :tr , id: dom_id(user) do %>
-  <td><%= user.email %></td>
-  <td>
-    <%= link_to 'Add Friend', [:new, :friendships, id: user ], remote: true %>
-    <!--<%= link_to 'Add Friend', [:new, :friendships, id: user ], remote: true %>-->
-    <!--<%= link_to 'Add Friend', [:new, :friendships, id: user ], remote: true %>-->
-  </td>
-<% end %>
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: 'friendships/friend', collection: @users, as: :user %>
+  </tbody>
+</table>

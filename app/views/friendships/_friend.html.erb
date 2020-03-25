@@ -1,0 +1,16 @@
+<%= content_tag :tr , id: dom_id(user) do %>
+  <td><%= user.email %></td>
+  <td>
+    <%= link_to 'Add Friend', [:new, :friendships, id: user ], remote: true 
+    unless current_user.has_friendship?(user) %>
+    
+    <%= link_to 'Accept Friend', [:friendships, id: user ], remote: true 
+    if current_user.requested_friends_with?(user) %>
+    
+    <%= link_to 'Remove Request', [:friendships, id: user ], remote: true 
+    if current_user.pending_friends_with?(user) %>
+    
+    <%= link_to 'Unfriend', [:friendships,id: user], remote: true
+      if current_user.friend_with?(user) %>
+  </td>
+<% end %>
