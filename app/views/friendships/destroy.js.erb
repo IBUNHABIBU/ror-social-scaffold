@@ -1,0 +1,2 @@
+node = document.getElementById('<%= dom_id(@user) %>')
+node.innerHTML = '<%= j render 'friendships/friend', user: @user %>'

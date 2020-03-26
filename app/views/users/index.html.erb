@@ -8,21 +8,9 @@
           <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
         </span>
       </li>
-      <% if current_user.is_friend?(user) %>
-       <li>
-          <%= link_to 'Remove Friend','#', class:"remove-btn" %>
-        
-      </li>
-      <% else %>
-      <li>
-        <%= form_for current_user.friendships.build(friend: user) do |f| %>
-          <%= f.hidden_field :user_id %>
-          <%= f.hidden_field :friend_id %>
-          <button class="add-btn">AddFriend</button>
-          <% end %>
-      </li>
-      <% end %>
+      
     </div>
     <% end %>
   </ul>
+  <%= link_to 'dashboard', dashboards_path %>
 </section>

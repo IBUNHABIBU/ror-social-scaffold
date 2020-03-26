@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'friendships/create'
   get 'friendships/index'
-  resources :dashboards, only: [:new, :create, :destroy]
+  resources :dashboards , only: [:new, :create, :destroy, :index]
   root 'posts#index'
 
   devise_for :users
