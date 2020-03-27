@@ -1,11 +1,14 @@
 class FriendshipsController < ApplicationController
-  def create 
-    Friendship.create!(friendship_params)
-    redirect_to users_path
+  before_action :authenticate_user!
+  before_action :set_user
+
+  def new
+    current_user.friend_request(@user)
+    current_user.reload
   end
   
   private 
-  def friendship_params
-    params.require(:friendship).permit(:user_id, :friend_id)
+  def set_user
+    @user = User.find(params[:id])
   end
 end
