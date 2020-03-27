@@ -1,1 +1,14 @@
- <%= render partial: 'friendships/friend', collection: @users, as: :user %>
+<section class="users-section">
+    <table class='table table-condensed'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: 'friendships/friend', collection: @users, as: :user %>
+    </tbody>
+  </table>
+</section>
