@@ -1,16 +1,17 @@
 <section class="users-section">
-  <ul class="users-list">
-    <% @users.each do |user| %>
-    <div class="user-list">
-      <li>
-        Name: <%= user.name %>
-        <span class="profile-link">
-          <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
-        </span>
-      </li>
-      
-    </div>
-    <% end %>
-  </ul>
-  <%= link_to 'dashboard', dashboards_path %>
+ <div class="column is-half">
+    <table class='table table-condensed'>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: 'friendships/friend', collection: @users, as: :user %>
+    </tbody>
+  </table>
+  </div>
 </section>

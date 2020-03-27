@@ -1,11 +1,11 @@
 <%= content_tag :tr, id: dom_id(user) do %>
- <td><%= user.name %></td>
-  <td><%= user.email %></td>
-  <td>
-    <%= link_to 'Add Friend', [:new, :friendship, id: user], remote: true unless current_user.has_friendship?(user) %>
-    <%# link_to 'Add Friend', new_friendship_path(id: user), remote: true %>
-    <%= link_to 'Accept Request', [:friendships, id: user], method: :post, remote: true if current_user.requested_friends_with?(user) %>
-    <%= link_to 'Remove Request', [:friendship, id: user], method: :delete, remote: true if current_user.pending_friends_with?(user) %>
-    <%= link_to 'Remove Friend', [:friendship, id: user], method: :delete, remote: true if current_user.friends_with?(user) %>
-  </td>
+ 
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td>
+        <%= link_to 'Add Friend', [:new, :friendship, id: user], class: "button is-info is-small", remote: true unless current_user.has_friendship?(user) %>
+        <%= link_to 'Accept Request', [:friendships, id: user], method: :post, class: "button is-success is-small", remote: true if current_user.requested_friends_with?(user) %>
+        <%= link_to 'Remove Request', [:friendship, id: user], method: :delete, class: "button is-warning is-small", remote: true if current_user.pending_friends_with?(user) %>
+        <%= link_to 'Remove Friend', [:friendship, id: user], method: :delete, class: "button is-danger is-small", remote: true if current_user.friends_with?(user) %>
+    </td>
 <% end %>
