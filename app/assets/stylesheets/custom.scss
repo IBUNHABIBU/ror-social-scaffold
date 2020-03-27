@@ -342,3 +342,20 @@ form {
     width: 50%;
   }
 }
+.user-list {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+}
+.add-btn {
+  padding:2px;
+  background-color:green;
+  color:white;
+  border-radius:4px;
+}
+.remove-btn {
+  padding:2px;
+  background-color:red;
+  color:white;
+  border-radius:4px;
+}
