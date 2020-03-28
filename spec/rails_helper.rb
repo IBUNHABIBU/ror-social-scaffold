@@ -3,7 +3,7 @@ require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 require 'support/factory_bot'
 require 'capybara/rspec'
@@ -60,7 +60,6 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.infer_base_class_for_anonymous_controllers = false
 
-  
   config.include Warden::Test::Helpers
   config.include Rails.application.routes.url_helpers
   # Filter lines from Rails gems in backtraces.
@@ -68,9 +67,9 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
   Shoulda::Matchers.configure do |config|
-  config.integrate do |with|
-    with.test_framework :rspec
-    with.library :rails
+    config.integrate do |with|
+      with.test_framework :rspec
+      with.library :rails
+    end
   end
-end
 end
