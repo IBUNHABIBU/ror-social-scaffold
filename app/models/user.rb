@@ -29,7 +29,7 @@ class User < ApplicationRecord
   end
 
   def pending_friends_with?(friend)
-    return false if self == friend
+    return false unless self == friend
 
     pending_friends.map(&:id).include?(friend.id)
   end
@@ -41,11 +41,11 @@ class User < ApplicationRecord
   end
 
   def friend_request(friend)
-    unless self == friend || Friendship.where(user: self, friend: friend).exists?
-      transaction do
-        Friendship.create(user: self, friend: friend, status: :pending)
-        Friendship.create(user: friend, friend: self, status: :requested)
-      end
+    return if self == friend || Friendship.where(user: self, friend: friend).exists?
+
+    transaction do
+      Friendship.create(user: self, friend: friend, status: :pending)
+      Friendship.create(user: friend, friend: self, status: :requested)
     end
   end
 
