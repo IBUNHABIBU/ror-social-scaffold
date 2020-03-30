@@ -7,7 +7,7 @@ We  have built a social media application we call ***Stay in touch***
 * Bootstrap
 * RSpec
 
-## Milestone 5: Prepare data architecture documentation
+## Milestone 5: Friendships v1
 1. Creating friendship 
 
 ![screenshot](https://github.com/IBUNHABIBU/ror-social-scaffold/blob/Milestone-1/docs/ERD.jpeg)
