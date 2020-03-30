@@ -6,8 +6,8 @@
         </span></td>
     <td>
     <%= link_to 'Add Friend', [:new, :friendship, id: user], remote: true unless current_user.has_friendship?(user) %>
-    <%# link_to 'Add Friend', new_friendship_path(id: user), remote: true %>
     <%= link_to 'Accept Request', [:friendships, id: user], method: :post, remote: true if current_user.requested_friends_with?(user) %>
     <%= link_to 'Remove Request', [:friendship, id: user], method: :delete, remote: true if current_user.pending_friends_with?(user) %>
-    <%= link_to 'Remove Friend', [:friendship, id: user], method: :delete, remote: true if current_user.friends_with?(user) %> </td>
+    <%= link_to 'Remove Friend', [:friendship, id: user], method: :delete, remote: true if current_user.friends_with?(user) %> 
+    </td>
 <% end %>
