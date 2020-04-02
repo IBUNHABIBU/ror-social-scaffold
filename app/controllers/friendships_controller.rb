@@ -4,7 +4,7 @@ class FriendshipsController < ApplicationController
 
   def new
     current_user.friend_request(@user)
-    current_user.reload
+      current_user.reload
   end
 
   def create
@@ -14,7 +14,7 @@ class FriendshipsController < ApplicationController
 
   def destroy
     current_user.reject_request(@user)
-    current_user.reload
+     current_user.reload
   end
 
   private

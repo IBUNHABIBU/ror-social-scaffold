@@ -5,9 +5,6 @@
           <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
         </span></td>
     <td>
-    <%= link_to 'Add Friend', [:new, :friendship, id: user], remote: true unless current_user.friendship?(user) %>
-    <%= link_to 'Accept Request', [:friendships, id: user], method: :post, remote: true if current_user.requested_friends_with?(user) %>
-    <%= link_to 'Cancel Request', [:friendship, id: user], method: :delete, remote: true if current_user.pending_friends_with?(user) %>
-    <%= link_to 'Remove Friend', [:friendship, id: user], method: :delete, remote: true if current_user.friends_with?(user) %> 
+  <%= render partial: 'friendships/friendship_button',locals:{user:user} %>
     </td>
 <% end %>
