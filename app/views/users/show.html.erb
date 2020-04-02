@@ -1,8 +1,8 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
-   <%= content_tag :button, id: dom_id(@user) do %>
-   <%= render partial: 'friendships/friendship_button',locals:{user:@user} %>
-  <% end %>
+  
+    
+     <%= render partial: 'friendships/friendship_button',locals:{user:@user} %>
   
   <article class="timeline">
     <h3>Recent posts:</h3>

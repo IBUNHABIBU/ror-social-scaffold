@@ -10,14 +10,8 @@ class User < ApplicationRecord
   has_many :pending_friends, -> { where friendships: { status: :pending } }, through: :friendships, source: :friend
   has_many :blocked_friends, -> { where friendships: { status: :blocked } }, through: :friendships, source: :friend
 
-  # has_many :friendships_inverse, class_name: 'Friendship', foreign_key: :friend_id
-  # has_many :friends_inverse, through: :friendships_inverse, source: :user
-
-  # def all_friends
-  #   friends + friends_inverse
-  # end
-
-  def friendship?(friend)
+  
+  def has_friendship?(friend)
     return true if self == friend
 
     friendships.map(&:friend_id).include?(friend.id)
