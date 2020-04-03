@@ -329,7 +329,18 @@ form {
     width: 70%;
   }
 }
-
+.btn-red {
+  color:red;
+}
+.btn-blue {
+  color:blue;
+}
+.btn-green {
+  color:green;
+}
+.btn-orange {
+  color:orange;
+}
 @media (min-width: 780px) {
   form {
     width: 40%;
