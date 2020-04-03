@@ -5,6 +5,11 @@ class Post < ApplicationRecord
   belongs_to :user
 
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
+  
+  scope :friends_posts, -> (current_user) { where('user_id IN (?) OR user_id = ?',
+                                            current_user.friend_ids, current_user.id)
+                                            .order(:created_at) }
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
+  
 end

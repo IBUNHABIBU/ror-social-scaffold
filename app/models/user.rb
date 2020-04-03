@@ -44,6 +44,9 @@ class User < ApplicationRecord
     end
   end
 
+  def feed
+    Post.where(user_id: friend_ids + [id])
+  end
   # jane.accept_request(john)
   # john.accept_request(jane) ! bad
   def accept_request(friend)
@@ -54,6 +57,12 @@ class User < ApplicationRecord
   end
 
   def reject_request(friend)
+    transaction do
+      Friendship.find_by(user: self, friend: friend)&.destroy!
+      Friendship.find_by(user: friend, friend: self)&.destroy!
+    end
+  end
+  def ignore_request(friend)
     transaction do
       Friendship.find_by(user: self, friend: friend)&.destroy!
       Friendship.find_by(user: friend, friend: self)&.destroy!
