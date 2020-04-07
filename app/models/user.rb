@@ -14,13 +14,11 @@ class User < ApplicationRecord
   
   def has_friendship?(friend)
     return true if self == friend
-
     friendships.map(&:friend_id).include?(friend.id)
   end
 
   def requested_friends_with?(friend)
     return false if self == friend
-
     requested_friends.map(&:id).include?(friend.id)
   end
 

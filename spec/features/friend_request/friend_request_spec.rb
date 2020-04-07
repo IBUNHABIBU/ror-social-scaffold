@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature ' Following friend ' do
+RSpec.feature ' Adding friends ' do
   before do
     @maya = User.create(name: 'Maya', email: 'maya@gmail.com', password: '123456')
     @juma = User.create(name: 'Jumaa', email: 'juma@gmail.com', password: '123456')
@@ -14,9 +14,8 @@ RSpec.feature ' Following friend ' do
     href = "/friendships?friend_id=#{@juma.id}"
     expect(page).not_to have_link('Add Friend', href: href)
 
-    link = "a[href='/friendships?friend_id=#{@maya.id}']"
+    link = "a[href='/users']"
     find(link)
-    href = "/friendships?friend_id=#{@maya.id}"
-    expect(page).to have_link('Add Friend', href: href)
+    expect(page).to have_link('Add Friend')
   end
 end
