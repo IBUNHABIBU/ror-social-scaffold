@@ -1,13 +1,13 @@
 class FriendshipsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user
-  def index 
+  def index
     @friend = Friend.all
   end
 
   def new
     current_user.friend_request(@user)
-      current_user.reload
+    current_user.reload
   end
 
   def create

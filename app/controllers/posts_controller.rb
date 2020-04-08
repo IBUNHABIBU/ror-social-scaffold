@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.new
-    @posts = Post.friends_posts(current_user)
+    @posts = Post.friends_posts
     timeline_posts
   end
 
