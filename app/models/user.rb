@@ -43,9 +43,6 @@ class User < ApplicationRecord
     end
   end
 
-  def feed
-    Post.where(user_id: friend_ids + [id])
-  end
   # jane.accept_request(john)
   # john.accept_request(jane) ! bad
   def accept_request(friend)

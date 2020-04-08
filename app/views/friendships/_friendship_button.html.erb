@@ -1,4 +1,4 @@
-<%= content_tag :tr, id: dom_id(@user) do %>
+<%= content_tag :button, id: dom_id(@user) do %>
  <%= link_to 'Add Friend', [:new, :friendship, id: user], class:"btn-green", remote: true, data:{disable_with:"Adding friend..."} unless current_user.has_friendship?(user) %>
     <%# link_to 'Add Friend', new_friendship_path(id: user), remote: true %>
     <%= link_to 'Accept Request', [:friendships, id: user], class:"btn-blue", method: :post, remote: true if current_user.requested_friends_with?(user) %>
@@ -6,4 +6,4 @@
     <%= link_to 'Cancel Request', [:friendship, id: user], class:"btn-orange", method: :delete, remote: true if current_user.pending_friends_with?(user) %>
     <%= link_to 'Unfriend', [:friendship, id: user], class:"btn-red", method: :delete, remote: true if current_user.friends_with?(user) %>
     <%= link_to 'Ignore request', [:friendship, id: user], class:"btn-red", method: :delete, remote: true if current_user.requested_friends_with?(user) %>
- <% end %>
+<% end %>
