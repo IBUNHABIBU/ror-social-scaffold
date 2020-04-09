@@ -7,7 +7,7 @@
   </td>
   
   <td>
-    <%= link_to 'Add Friend', [:new, :friendship, id: user], class:"btn-green", remote: true, data:{disable_with:"Adding friend..."} unless current_user.has_friendship?(user) %>
+    <%= link_to 'Add Friend', [:new, :friendship, id: user], class:"btn-green", remote: true, data:{disable_with:"Adding friend..."} unless current_user.friendship?(user) %>
     <%# link_to 'Add Friend', new_friendship_path(id: user), remote: true %>
     <%= link_to 'Accept Request', [:friendships, id: user], class:"btn-blue", method: :post, remote: true if current_user.requested_friends_with?(user) %>
   

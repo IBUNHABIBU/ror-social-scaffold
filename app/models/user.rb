@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :pending_friends, -> { where friendships: { status: :pending } }, through: :friendships, source: :friend
   has_many :blocked_friends, -> { where friendships: { status: :blocked } }, through: :friendships, source: :friend
   has_many :friends_posts, through: :friends, source: :posts
-  def has_friendship?(friend)
+  def friendship?(friend)
     return true if self == friend
 
     friendships.map(&:friend_id).include?(friend.id)
