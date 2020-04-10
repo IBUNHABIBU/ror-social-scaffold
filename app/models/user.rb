@@ -66,4 +66,13 @@ class User < ApplicationRecord
       Friendship.find_by(user: friend, friend: self)&.destroy!
     end
   end
+  
+  # def friends
+  #   friends = friendships.includes(:friend).where(status: :accepted).references(:users)
+  #   friends.map(&:friend)
+  # end
+
+  def feed
+    Post.where(user_id: friends.map(&:id) + [id])
+  end
 end

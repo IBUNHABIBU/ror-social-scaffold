@@ -3,7 +3,6 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.new
-    @posts = current_user.friends_posts
     timeline_posts
   end
 
@@ -16,11 +15,11 @@ class PostsController < ApplicationController
       render :index, alert: 'Post was not created.'
     end
   end
-
+  
   private
 
   def timeline_posts
-    @timeline_posts ||= Post.all.ordered_by_most_recent.includes(:user)
+    @timeline_posts ||= current_user.feed.ordered_by_most_recent.includes(:user)
   end
 
   def post_params
