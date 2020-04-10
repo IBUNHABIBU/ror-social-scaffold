@@ -44,8 +44,6 @@ class User < ApplicationRecord
     end
   end
 
-  # jane.accept_request(john)
-  # john.accept_request(jane) ! bad
   def accept_request(friend)
     transaction do
       Friendship.find_by(user: self, friend: friend, status: [:requested])&.accepted!
@@ -66,11 +64,6 @@ class User < ApplicationRecord
       Friendship.find_by(user: friend, friend: self)&.destroy!
     end
   end
-  
-  # def friends
-  #   friends = friendships.includes(:friend).where(status: :accepted).references(:users)
-  #   friends.map(&:friend)
-  # end
 
   def feed
     Post.where(user_id: friends.map(&:id) + [id])
