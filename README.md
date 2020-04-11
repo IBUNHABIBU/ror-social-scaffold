@@ -6,6 +6,9 @@ We  have built a social media application we call ***Stay in touch***
 * Ruby on rails
 * Bootstrap
 * RSpec
+* 
+## Live demo
+https://sm-social-app.herokuapp.com/
 
 ## Milestone 5: Friendships v1
 1. Creating friendship 
