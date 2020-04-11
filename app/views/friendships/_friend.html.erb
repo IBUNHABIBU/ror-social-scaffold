@@ -1,0 +1,20 @@
+<%= content_tag :tr, id: dom_id(user) do %>
+  <td><%= user.name %></td>
+  <td>
+    <span class="profile-link">
+          <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
+    </span>
+  </td>
+  
+  <td>
+    <%= link_to 'Add Friend', [:new, :friendship, id: user], class:"btn-green", remote: true, data:{disable_with:"Adding friend..."} unless current_user.friendship?(user) %>
+  
+    <%= link_to 'Accept Request', [:friendships, id: user], class:"btn-blue", method: :post, remote: true if current_user.requested_friends_with?(user) %>
+  
+    <%= link_to 'Cancel Request', [:friendship, id: user], class:"btn-orange", method: :delete, remote: true if current_user.pending_friends_with?(user) %>
+    <%= link_to 'Unfriend', [:friendship, id: user], class:"btn-red", method: :delete, remote: true if current_user.friends_with?(user) %>
+    <%= link_to 'Ignore request', [:friendship, id: user], class:"btn-red", method: :delete, remote: true if current_user.requested_friends_with?(user) %>
+  
+   
+   </td>
+<% end %>

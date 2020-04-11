@@ -7,10 +7,8 @@ We  have built a social media application we call ***Stay in touch***
 * Bootstrap
 * RSpec
 
-## Milestone 1: Prepare data architecture documentation
-1. Creating ERD using lucid chart
-2. Exporting the ERD to jpeg 
-3. Creating the folder we named it docs and updloaded the ERD file
+## Milestone 5: Friendships v1
+1. Creating friendship 
 
 ![screenshot](https://github.com/IBUNHABIBU/ror-social-scaffold/blob/Milestone-1/docs/ERD.jpeg)
 
