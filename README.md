@@ -10,7 +10,7 @@ We  have built a social media application we call ***Stay in touch***
 ## Live demo
 https://sm-social-app.herokuapp.com/
 
-## Milestone 5: Friendships v1
+## Milestone 5: Friendships v2
 1. Creating friendship 
 
 ![screenshot](https://github.com/IBUNHABIBU/ror-social-scaffold/blob/Milestone-1/docs/ERD.jpeg)
