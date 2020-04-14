@@ -19,7 +19,11 @@
         </div>
       </div>
       <% if current_user %>
+      <!--<%= current_user.name %>-->
+      <!--  <%= current_user.email %>-->
+      <!--  <%= current_user.friends.count %>-->
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+        
       <% else %>
         <%= link_to 'Sign in', user_session_path %>
       <% end %>
