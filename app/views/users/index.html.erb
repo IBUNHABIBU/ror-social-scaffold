@@ -1,13 +1,13 @@
 <section class="users-section">
     <table class='table table-condensed'>
     <thead>
-      <tr>
+      <tr class="heading">
         <th>Name</th>
         <th>Profile</th>
         <th>Action</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="part">
       <%= render partial: 'friendships/friend', collection: @users, as: :user %>
     </tbody>
   </table>

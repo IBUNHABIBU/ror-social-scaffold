@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
 
 $primary-color-dark: #591ccc;
-$primary-color: #8bc34a;
+$primary-color: #9a64ff;
 $primary-color-light: #dcedc8;
 $primary-color-text: #212121;
 $divider-color: #bdbdbd;
@@ -353,4 +353,10 @@ form {
   .user-section {
     width: 50%;
   }
+}
+.heading{
+border: 1px solid $divider-color;
+}
+.part {
+  border-top: 1px solid $divider-color;
 }
