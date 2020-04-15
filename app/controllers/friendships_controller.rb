@@ -19,9 +19,11 @@ class FriendshipsController < ApplicationController
   end
 
   private
+
   def user_reload
     current_user.reload
   end
+
   def set_user
     @user = User.find(params[:id])
   end

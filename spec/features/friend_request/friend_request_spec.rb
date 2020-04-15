@@ -18,5 +18,4 @@ RSpec.feature ' Adding friends ' do
     find(link)
     expect(page).to have_link('Add Friend')
   end
-  
 end

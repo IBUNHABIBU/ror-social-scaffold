@@ -14,5 +14,4 @@ RSpec.feature ' listing all my friends ' do
     expect(page).to have_content(@juma.friends.count)
     expect(page).to have_link('Friends')
   end
-  
 end
