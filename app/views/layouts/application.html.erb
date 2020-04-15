@@ -21,7 +21,7 @@
       <% if current_user %>
         <%= current_user.name  %>
         <%= current_user.email %>
-        <%=link_to "Friends: #{current_user.friends.count}",current_user.friends(@user) %>
+        <%=link_to "Friends: #{current_user.friends.count}","#" %>
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
         
       <% else %>
