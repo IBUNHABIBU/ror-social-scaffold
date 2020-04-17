@@ -6,15 +6,14 @@ may signup and meet with friends and posting their post.
 ## Built with 
 * Ruby on rails
 * Bootstrap
-* RSpec
-Usage
+* RSpec 
+
+## Usage
 Clone the repository to your machine and cd into the directory
 
-$ git clone git@github.com:MouhaDiouf/private-events.git
-$ cd Private-events
-Use the following command to start the rails server then visit: http://localhost:3000 to use the app
+Use the following command "$ rails s " to start the rails server then visit: http://localhost:3000 to use the app
 
-$ rails s
+
 ## Live demo
 https://sm-social-app.herokuapp.com/
 
