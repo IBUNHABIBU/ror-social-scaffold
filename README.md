@@ -17,6 +17,8 @@ Use the following command "$ rails s " to start the rails server then visit: htt
 ## Live demo
 https://sm-social-app.herokuapp.com/
 
+# Entity Relationship Diagram (ERD)
+
 ![screenshot](https://github.com/IBUNHABIBU/ror-social-scaffold/blob/Milestone-1/docs/ERD.jpeg)
 
 ## Authors
