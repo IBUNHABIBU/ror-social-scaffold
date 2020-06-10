@@ -21,9 +21,10 @@ https://sm-social-app.herokuapp.com/
 
 ![screenshot](https://github.com/IBUNHABIBU/ror-social-scaffold/blob/Milestone-1/docs/ERD.jpeg)
 
-## Authors
-#### Author 1
-* Github: Salum Habibu https://github.com/IBUNHABIBU 
+## Author
+* Github: [IBUNHABIBU](https://github.com/IBUNHABIBU)
+* Twitter: [@ibunhabibu](https://twitter.com/Ibunhabibu)
+* LinkedIn: [Salum Habibu Kombo](https://www.linkedin.com/in/salum-habibu/)
 
 #### Author 2 
 * Github: Maya Elfeky https://github.com/maya88en/
