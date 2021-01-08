@@ -1,10 +1,10 @@
 # Stay in touch
-This is the final project for ruby on rails curriculum.
-We  have built a social media application we call ***Stay in touch*** where user
+This is the final project for Ruby on Rails curriculum.
+We have built a social media application we call ***Stay in touch*** where user
 may signup and meet with friends and posting their post.
 
 ## Built with 
-* Ruby on rails
+* Ruby on Rails
 * Bootstrap
 * RSpec 
 
