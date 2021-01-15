@@ -34,7 +34,6 @@ Give a :star: if you like this project!
 #### Author 2 
 * Github: Maya Elfeky https://github.com/maya88en/
 
-
 ## 📝 License
 
 This project is [MIT](https://opensource.org/licenses/MIT) licensed.
