@@ -21,6 +21,11 @@ https://sm-social-app.herokuapp.com/
 
 ![screenshot](https://github.com/IBUNHABIBU/ror-social-scaffold/blob/Milestone-1/docs/ERD.jpeg)
 
+
+## Show your support
+
+Give a :star: if you like this project!
+
 ## Author
 * Github: [IBUNHABIBU](https://github.com/IBUNHABIBU)
 * Twitter: [@ibunhabibu](https://twitter.com/Ibunhabibu)
@@ -28,3 +33,9 @@ https://sm-social-app.herokuapp.com/
 
 #### Author 2 
 * Github: Maya Elfeky https://github.com/maya88en/
+
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
+
