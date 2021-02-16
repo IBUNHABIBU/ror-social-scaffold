@@ -1,7 +1,19 @@
-# Stay in touch
-This is the final project for Ruby on Rails curriculum.
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
+<br />
+
+<p align="center">
+  <a href="git@github.com:IBUNHABIBU/ror-social-scaffold.git">
+    <p align="center"> <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/rails/rails.png" alt="JavaScript" width="100" height="100"> </p>
+  </a>
+
+  <h2 align="center"> STAY IN TOUCH </h2>
+  <h3 align="center">This is the final project for Ruby on Rails curriculum.
 We have built a social media application we call ***Stay in touch*** where user
-may signup and meet with friends and posting their post.
+may signup and meet with friends and posting their post.</h3>
 
 ## Built with 
 * Ruby on Rails
